@@ -1,6 +1,85 @@
 <configs>
-	 <append xpath="/items/item[@name='meleeToolKnife']/property[@name='Tags']/@value">,blades</append>
 
+	<!--
+		slashing  - Cutting, so good for dismembering
+		bashing   - Effectively blunt, but different intentionally, good for bashing things
+		pirecing  - Sticks into things
+		shredding - Flesh removal
+	-->
+	<append xpath="/items/item[@name='meleeToolStoneAxe']/property[@name='Tags']/@value">,slashing</append>
+	<append xpath="/items/item[@name='meleeToolClawHammer']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeToolFireaxeIron']/property[@name='Tags']/@value">,slashing</append>
+	<append xpath="/items/item[@name='meleeToolFireaxeSteel']/property[@name='Tags']/@value">,slashing</append>
+	<append xpath="/items/item[@name='meleeToolPickaxeIron']/property[@name='Tags']/@value">,piercing</append>
+	<append xpath="/items/item[@name='meleeToolPickaxeSteel']/property[@name='Tags']/@value">,piercing</append>
+	<append xpath="/items/item[@name='meleeToolShovelStone']/property[@name='Tags']/@value">,piercing</append>
+	<append xpath="/items/item[@name='meleeToolShovelIron']/property[@name='Tags']/@value">,piercing</append>
+	<append xpath="/items/item[@name='meleeToolShovelSteel']/property[@name='Tags']/@value">,piercing</append>
+	<append xpath="/items/item[@name='meleeToolChainsaw']/property[@name='Tags']/@value">,shredding</append>
+	<append xpath="/items/item[@name='meleeToolAuger']/property[@name='Tags']/@value">,shredding</append>
+	<append xpath="/items/item[@name='meleeToolWrench']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeToolKnifeBone']/property[@name='Tags']/@value">,slashing</append>
+	<append xpath="/items/item[@name='meleeToolKnifeIron']/property[@name='Tags']/@value">,slashing</append>
+	<append xpath="/items/item[@name='meleeToolKnifeCandy']/property[@name='Tags']/@value">,slashing</append>
+	<append xpath="/items/item[@name='meleeToolKnifeMachete']/property[@name='Tags']/@value">,slashing</append>
+	<append xpath="/items/item[@name='meleeClubWood']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeClubIron']/property[@name='Tags']/@value">,bashing</append>
+
+	<append xpath="/items/item[@name='meleeClubCandy']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeClubBaseballBat']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeStunBaton']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeToolSledgehammerStone']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeToolSledgehammerIron']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeToolSledgehammerSteel']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeKnucklesLeather']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeKnucklesIron']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeKnucklesSteel']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeToolHoeIron']/property[@name='Tags']/@value">,piercing</append>
+	<append xpath="/items/item[@name='meleeToolFlashlight02']/property[@name='Tags']/@value">,bashing</append>
+	<append xpath="/items/item[@name='meleeToolTorch']/property[@name='Tags']/@value">,bashing</append>
+
+	<append xpath="/items/item[@name='meleeThrownSpearStone']/property[@name='Tags']/@value">,piercing</append>
+	<append xpath="/items/item[@name='meleeThrownSpearIron']/property[@name='Tags']/@value">,piercing</append>
+	<append xpath="/items/item[@name='meleeThrownSpearSteel']/property[@name='Tags']/@value">,piercing</append>
+
+	<append xpath="/items/item[@name='gunToolNailgun']/property[@name='Tags']/@value">,smallarms</append>
+	<append xpath="/items/item[@name='gunPistol']/property[@name='Tags']/@value">,smallarms</append>
+	<append xpath="/items/item[@name='gun44Magnum']/property[@name='Tags']/@value">,smallarms</append>
+	<append xpath="/items/item[@name='gunSMG5']/property[@name='Tags']/@value">,smallarms</append>
+
+
+	<append xpath="/items/item[@name='gunHuntingRifle']/property[@name='Tags']/@value">,rifle</append>
+	<append xpath="/items/item[@name='gunMR10']/property[@name='Tags']/@value">,rifle</append>
+	<append xpath="/items/item[@name='gunAK47']/property[@name='Tags']/@value">,rifle</append>
+	<append xpath="/items/item[@name='gunTacticalAR']/property[@name='Tags']/@value">,rifle</append>
+	<append xpath="/items/item[@name='gunM60']/property[@name='Tags']/@value">,rifle</append>
+	<append xpath="/items/item[@name='gunRocketLauncher']/property[@name='Tags']/@value">,launcher</append>
+	<append xpath="/items/item[@name='gunBowPrimitive']/property[@name='Tags']/@value">,archery</append>
+	<append xpath="/items/item[@name='gunBowWooden']/property[@name='Tags']/@value">,archery</append>
+	<append xpath="/items/item[@name='gunBowCompound']/property[@name='Tags']/@value">,archery</append>
+	<append xpath="/items/item[@name='gunCrossbowIron']/property[@name='Tags']/@value">,archery</append>
+	<append xpath="/items/item[@name='gunCrossbowCompound']/property[@name='Tags']/@value">,archery</append>
+	<append xpath="/items/item[@name='gunJunkTurret']/property[@name='Tags']/@value">,automatic</append>
+
+	<append xpath="/items/item[@name='meleeHandPlayer']/property[@name='Tags']/@value">,bashing</append>
+
+	<!-- AMMO -->
+	<append xpath="/items/item[@name='ammo9mmBulletBall']/property[@name='Tags']/@value">,piercing.lowcalibre</append>
+	<append xpath="/items/item[@name='ammo44MagnumBulletBall']/property[@name='Tags']/@value">,piercing,highcalibre</append>
+	<append xpath="/items/item[@name='ammo762mmBulletBall']/property[@name='Tags']/@value">,piercing,highcalibre</append>
+	<append xpath="/items/item[@name='ammoShotgunShell']/property[@name='Tags']/@value">,shredding,lowcalibre</append>
+	<append xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Tags']/@value">,shredding,highcalibre</append>
+	<append xpath="/items/item[@name='ammoShotgunBreachingSlug']/property[@name='Tags']/@value">,shredding,highcalibre</append>
+	<append xpath="/items/item[@name='ammoBlunderbuss']/property[@name='Tags']/@value">,shredding,lowcalibre</append>
+	<append xpath="/items/item[@name='ammoJunkTurret']/property[@name='Tags']/@value">,shredding,lowcalibre</append>
+	<append xpath="/items/item[@name='ammoRocketHE']/property[@name='Tags']/@value">,explosive</append>
+	<append xpath="/items/item[@name='ammoRocketFrag']/property[@name='Tags']/@value">,shredding</append>
+
+	<append xpath="/items/item[@name='ammoArrowStone']/property[@name='Tags']/@value">,piercing</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltStone']/property[@name='Tags']/@value">,piercing</append>
+	<append xpath="/items/item[@name='ammoCrossbowBoltIron']/property[@name='Tags']/@value">,piercing</append>
+
+	<!-- General block damage of hands (inc Zombie) -->
 	<append xpath="/items/item[@name='meleeHandMaster']/effect_group[@name='meleeHandMaster']">
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.6" tags="stone"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.7" tags="metal"/>
@@ -8,7 +87,7 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="steel"/>
 	</append>
 
-	<!-- Make zombie vomit hurt blocks -->
+	<!-- Make zombie vomit hurt blocks moar -->
 	<remove xpath="/items/item[starts-with(@name, 'ammoProjectileZombieVomit')]/effect_group[starts-with(@name, 'ammoProjectileZombieVomit')]/passive_effect[@name='DamageModifier' and contains(@tags, 'metal')]" />
 	<append xpath="/items/item[starts-with(@name, 'ammoProjectileZombieVomit')]/effect_group[starts-with(@name, 'ammoProjectileZombieVomit')]">
 		<passive_effect name="DamageModifier" operation="perc_set" value="1.5" tags="metal"/>
