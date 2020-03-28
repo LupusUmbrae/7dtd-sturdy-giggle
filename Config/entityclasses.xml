@@ -17,7 +17,7 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="upperbody, lowerbody"/>
 
 		<!-- Slashing! -->
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="head">
+		<passive_effect name="DamageModifier" operation="perc_add" value="0.2">
 			<requirement name="HoldingItemHasTags" tags="slashing"/>
 		</passive_effect>
 
@@ -26,13 +26,16 @@
 			<requirement name="HoldingItemHasTags" tags="bashing"/>
 		</passive_effect>
 		
-		<!-- Pirecing! -->
+		<!-- piercing! -->
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head">
-			<requirement name="HoldingItemHasTags" tags="pirecing"/>
+			<requirement name="HoldingItemHasTags" tags="piercing"/>
+		</passive_effect>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-0.2" tags="upperbody, lowerbody">
+			<requirement name="HoldingItemHasTags" tags="piercing"/>
 		</passive_effect>
 
 		<!-- Shredding! -->
-		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="upperbody, lowerbody">
+		<passive_effect name="DamageModifier" operation="perc_set" value="0.8" tags="upperbody, lowerbody">
 			<requirement name="HoldingItemHasTags" tags="shredding"/>
 		</passive_effect>
 

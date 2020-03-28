@@ -3,7 +3,7 @@
 	<!--
 		slashing  - Cutting, so good for dismembering
 		bashing   - Effectively blunt, but different intentionally, good for bashing things
-		pirecing  - Sticks into things
+		piercing  - Sticks into things
 		shredding - Flesh removal
 	-->
 	<append xpath="/items/item[@name='meleeToolStoneAxe']/property[@name='Tags']/@value">,slashing</append>
