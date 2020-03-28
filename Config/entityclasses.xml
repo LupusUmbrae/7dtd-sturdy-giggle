@@ -38,8 +38,8 @@
 
 		<!--  Adjust dismemberment so that slashing has a high chance -->
 
-		<passive_effect name="DismemberChance" operation="base_set" value="1" tags="head">
-			<!-- <requirement name="HoldingItemHasTags" tags="slashing"/> -->
+		<passive_effect name="DismemberChance" operation="base_set" value="0.15" tags="head">
+			<requirement name="HoldingItemHasTags" tags="slashing"/>
 		</passive_effect>
 		<passive_effect name="DismemberChance" operation="base_set" value="0.25" tags="arm">
 			<requirement name="HoldingItemHasTags" tags="slashing"/>
