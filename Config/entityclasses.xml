@@ -36,11 +36,6 @@
 			<requirement name="HoldingItemHasTags" tags="shredding"/>
 		</passive_effect>
 
-		<!-- Shredding! -->
-		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="upperbody, lowerbody">
-			<requirement name="HoldingItemHasTags" tags="archery"/>
-		</passive_effect>
-
 		<!--  Adjust dismemberment so that slashing has a high chance -->
 
 		<passive_effect name="DismemberChance" operation="base_set" value="0.15" tags="head">
