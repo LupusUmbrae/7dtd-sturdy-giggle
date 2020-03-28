@@ -17,23 +17,28 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="upperbody, lowerbody"/>
 
 		<!-- Slashing! -->
-		<passive_effect name="DamageModifier" operation="perc_set" value="0.2" tags="head">
+		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head">
 			<requirement name="HoldingItemHasTags" tags="slashing"/>
 		</passive_effect>
 
 		<!-- Bashing! -->
-		<passive_effect name="DamageModifier" operation="perc_set" value="0.6" tags="head">
+		<passive_effect name="DamageModifier" operation="perc_set" value="1.5" tags="head">
 			<requirement name="HoldingItemHasTags" tags="bashing"/>
 		</passive_effect>
 		
 		<!-- Pirecing! -->
-		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head">
+		<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="head">
 			<requirement name="HoldingItemHasTags" tags="pirecing"/>
 		</passive_effect>
 
 		<!-- Shredding! -->
 		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="upperbody, lowerbody">
 			<requirement name="HoldingItemHasTags" tags="shredding"/>
+		</passive_effect>
+
+		<!-- Shredding! -->
+		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="upperbody, lowerbody">
+			<requirement name="HoldingItemHasTags" tags="archery"/>
 		</passive_effect>
 
 		<!--  Adjust dismemberment so that slashing has a high chance -->
@@ -49,13 +54,13 @@
 		</passive_effect>
 
 		<passive_effect name="DismemberChance" operation="base_set" value="0.05" tags="head">
-			<requirement name="HoldingItemHasTags" tags="concussive,piercing,shredding"/>
+			<requirement name="HoldingItemHasTags" tags="bashing,piercing,shredding"/>
 		</passive_effect>
 		<passive_effect name="DismemberChance" operation="base_set" value="0.05" tags="arm">
-			<requirement name="HoldingItemHasTags" tags="concussive,piercing,shredding"/>
+			<requirement name="HoldingItemHasTags" tags="bashing,piercing,shredding"/>
 		</passive_effect>
 		<passive_effect name="DismemberChance" operation="base_set" value="0.05" tags="leg">
-			<requirement name="HoldingItemHasTags" tags="concussive,piercing,shredding"/>
+			<requirement name="HoldingItemHasTags" tags="bashing,piercing,shredding"/>
 		</passive_effect>
 
 		<!--here we reset damage modifier, but put a
@@ -83,7 +88,6 @@
 	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='DismemberMultiplierLegs']/@value">0.8</set>
 	
 	<!-- reduce all zombie speeds -->
-	<!-- 'Romero Zombies' -->
 	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeed'][@value='0.75']/@value">0.4</set>
 	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeed'][@value='0.08']/@value">0.04</set>
 	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeed'][@value='0.06']/@value">0.03</set>
