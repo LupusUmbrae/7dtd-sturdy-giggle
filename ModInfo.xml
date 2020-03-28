@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Robins_Mod" />
+		<Description value="Zombie damage adjustment" />
+		<Author value="Robin"/>
+		<Version value="A18.3_1.3" />
+		<Website value="" />
+	</ModInfo>
+</xml>

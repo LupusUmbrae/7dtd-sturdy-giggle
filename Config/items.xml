@@ -1,0 +1,32 @@
+<configs>
+	<append xpath="/items/item[@name='meleeHandMaster']/effect_group[@name='Base Effects']">
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.6" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.7" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="concrete"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="steel"/>
+	</append>
+
+	<!-- Make zombie vomit hurt blocks -->
+	<set xpath="/items/item[@name='ammoProjectileZombieVomit']/effect_group[@name='ammoProjectileZombieVomit']/passive_effect[@name='DamageModifier' and contains(@tags, 'metal')]@operation">perc_set</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieVomit']/effect_group[@name='ammoProjectileZombieVomit']/passive_effect[@name='DamageModifier' and contains(@tags, 'metal')]@value">1.5</set>
+	<append xpath="/items/item[@name='ammoProjectileZombieVomit']/effect_group[@name='ammoProjectileZombieVomit']">
+		<passive_effect name="DamageModifier" operation="perc_set" value="1.4" tags="concrete"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="1.2" tags="steel"/>
+	</append>
+
+	<!-- Make zombie vomit feral hurt blocks -->
+	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/effect_group[@name='ammoProjectileZombieVomitFeral']/passive_effect[@name='DamageModifier' and contains(@tags, 'metal')]@operation">perc_set</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/effect_group[@name='ammoProjectileZombieVomitFeral']/passive_effect[@name='DamageModifier' and contains(@tags, 'metal')]@value">1.8</set>
+	<append xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/effect_group[@name='ammoProjectileZombieVomitFeral']">
+		<passive_effect name="DamageModifier" operation="perc_set" value="1.6" tags="concrete"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="1.4" tags="steel"/>
+	</append>
+
+	<!-- Make zombie vomit feral hurt blocks -->
+	<set xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/effect_group[@name='ammoProjectileZombieVomitRadiated']/passive_effect[@name='DamageModifier' and contains(@tags, 'metal')]@operation">perc_set</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/effect_group[@name='ammoProjectileZombieVomitRadiated']/passive_effect[@name='DamageModifier' and contains(@tags, 'metal')]@value">2</set>
+	<append xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/effect_group[@name='ammoProjectileZombieVomitRadiated']">
+		<passive_effect name="DamageModifier" operation="perc_set" value="1.8" tags="concrete"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="1.6" tags="steel"/>
+	</append>
+</configs>

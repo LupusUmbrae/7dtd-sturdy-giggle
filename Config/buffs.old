@@ -1,0 +1,17 @@
+<configs>
+<!-- change dismember perk to add to base rather than set -->
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[1]/passive_effect[1]/@operation">base_add</set>
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[1]/passive_effect[2]/@operation">base_add</set>
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[1]/passive_effect[3]/@operation">base_add</set>
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[1]/passive_effect[1]/@value">0.1</set>
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[1]/passive_effect[2]/@value">0.2</set>
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[1]/passive_effect[3]/@value">0.3</set>
+	
+	<!-- same with chainsaw exception -->
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[2]/passive_effect[1]/@operation">base_add</set>
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[2]/passive_effect[2]/@operation">base_add</set>
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[2]/passive_effect[3]/@operation">base_add</set>
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[2]/passive_effect[1]/@value">0.1</set>
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[2]/passive_effect[2]/@value">0.2</set>
+	<set xpath="//perk[@name='perkDeepCuts']/effect_group[2]/passive_effect[3]/@value">0.3</set>
+</configs>

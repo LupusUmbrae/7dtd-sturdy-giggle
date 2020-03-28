@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs>
+	
+	<!-- the default headshot passive effect is +0.5 or a
+		total of 150% We find that passive effect by its
+		tag and set it to +1.0 or a total of 200% -->
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='DamageModifier'][@tags='head']/@value">1</set>
+	<!--zombie vultures and dogs become way to 
+		overpowered if they share the same 
+		characteristics as human zombies, so we added a
+		new tag 'vulture' for zombie animals (except
+		bears. They have big heads anyway. -->			
+	<set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/property[@name='Tags']/@value">animal,zombie,hostile,vulture</set>
+	<set xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/property[@name='Tags']/@value">animal,zombie,hostile,vulture</set>
+	<set xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='Tags']/@value">animal,zombie,hostile,vulture</set>
+
+	<append xpath="/entity_classes/entity_class[@name='playerMale']/effect_group">
+		<!--step 1: scale damage to tags upperbody and
+			lowerbody to 50% (we've been tweaking this
+			to suit our tastes.) -->
+		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="upperbody, lowerbody"/>
+
+		<!-- Splat! -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head">
+			<requirement name="HoldingItemHasTags" tags="blunt"/>
+		</passive_effect>
+		
+		<!--  Adjust dismemberment so that knives are 
+		better than blunt -->
+
+		<passive_effect name="DismemberChance" operation="base_set" value="0.15" tags="head">
+			<requirement name="HoldingItemHasTags" tags="knife"/>
+		</passive_effect>
+		<passive_effect name="DismemberChance" operation="base_set" value="0.25" tags="arm">
+			<requirement name="HoldingItemHasTags" tags="knife"/>
+		</passive_effect>
+		<passive_effect name="DismemberChance" operation="base_set" value="0.25" tags="leg">
+			<requirement name="HoldingItemHasTags" tags="knife"/>
+		</passive_effect>
+
+		<passive_effect name="DismemberChance" operation="base_set" value="0.05" tags="arm">
+			<requirement name="HoldingItemHasTags" tags="blunt"/>
+		</passive_effect>
+		<passive_effect name="DismemberChance" operation="base_set" value="0.05" tags="leg">
+			<requirement name="HoldingItemHasTags" tags="blunt"/>
+		</passive_effect>		
+		<passive_effect name="DismemberChance" operation="base_set" value="0.05" tags="head">
+			<requirement name="HoldingItemHasTags" tags="blunt"/>
+		</passive_effect>
+
+
+		<!-- ffs - there's no "rifle" tag, but there is a shotgun, so this reduces shotgun/pistol headshot damage by override. -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head">
+			<requirement name="HoldingItemHasTags" tags="gun"/>
+			<requirement name="HoldingItemHasTags" tags="shotgun" invert="true"/>
+			<requirement name="HoldingItemHasTags" tags="pistol" invert="true"/>
+		</passive_effect>
+		<passive_effect name="DamageModifier" operation="perc_add" value="0.5" tags="head">
+			<requirement name="HoldingItemHasTags" tags="shotgun"/>
+		</passive_effect>
+		<passive_effect name="DamageModifier" operation="perc_add" value="0.2" tags="head">
+			<requirement name="HoldingItemHasTags" tags="pistol"/>
+		</passive_effect>
+
+		<!-- Bows really aren't zombie killers now. Headshot damage is _essential otherwise you'll get nowhere -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="head">
+			<requirement name="HoldingItemHasTags" tags="bow"/>
+		</passive_effect>
+
+		<!--here we reset damage modifier, but put a
+			requisite that it only apply to anything other
+			than zombies. Also reset dismember chance. -->
+		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="upperbody, lowerbody">
+			<requirement name="EntityTagCompare" target="other" tags="zombie" invert="true"/>
+		</passive_effect>
+		<passive_effect name="DismemberChance" operation="base_subtract" value="0.2">
+			<requirement name="EntityTagCompare" target="other" tags="zombie" invert="true"/>
+		</passive_effect>
+		<!--here we additionally reset damage modifier
+			for vulture tagged entities (includes dogs) 
+			because vultures and dogs still qualify as 
+			zombies and end up excluded from our previous
+			reset.-->
+		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="upperbody, lowerbody">
+			<requirement name="EntityTagCompare" target="other" tags="vulture"/>
+		</passive_effect>
+	</append>
+	
+	
+	<!-- reduce all zombie speeds -->
+	<!-- 'Romero Zombies' -->
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeed'][@value='0.75']/@value">0.4</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeed'][@value='0.08']/@value">0.04</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeed'][@value='0.06']/@value">0.03</set>
+	
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='0.2, 1.1']/@value">0.05, 0.25</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='0.2, 1.25']/@value">0.05, 0.3</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='0.2, 1.35']/@value">0.05, 0.4</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='.5, 1.35']/@value">0.1, 1.35</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='.5, 1.25']/@value">0.1, 1.25</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='.5, 1.1']/@value">0.1, 1.1</set>
+	
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedPanic'][@value='1.2']/@value">0.4</set>
+	
+	<!-- scale and adjust knockdown/knockprone values to roughly 4x expected difficulty. 50% feels right. -->
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='KnockdownProneDamageThreshold'][@value='0.5']/@value">0.25</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='KnockdownProneDamageThreshold'][@value='0.45']/@value">0.225</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='KnockdownKneelDamageThreshold'][@value='0.4']/@value">0.2</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='KnockdownKneelDamageThreshold'][@value='0.38']/@value">0.19</set>
+	
+</configs>
