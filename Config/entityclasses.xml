@@ -90,10 +90,10 @@
 	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeed'][@value='0.08']/@value">0.04</set>
 	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeed'][@value='0.06']/@value">0.03</set>
 	
-	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='0.2, 1.1']/@value">0.05, 0.25</set>
-	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='0.2, 1.25']/@value">0.05, 0.3</set>
-	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='0.2, 1.35']/@value">0.05, 0.4</set>
-	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='.5, 1.35']/@value">0.1, 0.5</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='0.2, 1.1']/@value">0.1, 1.1</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='0.2, 1.25']/@value">0.1, 1.25</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='0.2, 1.35']/@value">0.1, 1.35</set>
+	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedAggro'][@value='.5, 1.35']/@value">0.25, 1.35</set>
 	
 	<set xpath="/entity_classes/entity_class[starts-with(@name, 'zombie')]/property[@name='MoveSpeedPanic'][@value='1.2']/@value">0.4</set>
 	
