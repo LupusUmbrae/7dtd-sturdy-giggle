@@ -17,17 +17,17 @@
 		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="upperbody, lowerbody"/>
 
 		<!-- Slashing! -->
-		<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head">
+		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="head">
 			<requirement name="HoldingItemHasTags" tags="slashing"/>
 		</passive_effect>
 
 		<!-- Bashing! -->
-		<passive_effect name="DamageModifier" operation="perc_set" value="1.5" tags="head">
+		<passive_effect name="DamageModifier" operation="perc_add" value="0.5" tags="head">
 			<requirement name="HoldingItemHasTags" tags="bashing"/>
 		</passive_effect>
 		
 		<!-- Pirecing! -->
-		<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="head">
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="head">
 			<requirement name="HoldingItemHasTags" tags="pirecing"/>
 		</passive_effect>
 
